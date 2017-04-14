@@ -1,0 +1,2 @@
+# PermissionForM
+使用PermissionsDispather添加Android6.0动态权限适配
