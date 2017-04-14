@@ -19,7 +19,7 @@ import permissions.dispatcher.PermissionRequest;
 import permissions.dispatcher.RuntimePermissions;
 
 @RuntimePermissions
-public class MainActivity extends AppCompatActivity {
+public class PermissionsDispatcherActivity extends AppCompatActivity {
     private Button mButton;
 
     @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // MainActivityPermissionsDispatcher这个类要先在Build中makeProject或者makeModule才会生成。
-                MainActivityPermissionsDispatcher.showCameraWithCheck(MainActivity.this);
+                MainActivityPermissionsDispatcher.showCameraWithCheck(PermissionsDispatcherActivity.this);
             }
         });
 
@@ -94,6 +94,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        MainActivityPermissionsDispatcher.onRequestPermissionsResult(MainActivity.this,requestCode,grantResults);
+        MainActivityPermissionsDispatcher.onRequestPermissionsResult(PermissionsDispatcherActivity.this,requestCode,grantResults);
     }
 }
