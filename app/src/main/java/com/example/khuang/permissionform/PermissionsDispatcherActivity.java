@@ -31,7 +31,7 @@ public class PermissionsDispatcherActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // MainActivityPermissionsDispatcher这个类要先在Build中makeProject或者makeModule才会生成。
-                MainActivityPermissionsDispatcher.showCameraWithCheck(PermissionsDispatcherActivity.this);
+                PermissionsDispatcherActivityPermissionsDispatcher.showCameraWithCheck(PermissionsDispatcherActivity.this);
             }
         });
 
@@ -94,6 +94,7 @@ public class PermissionsDispatcherActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        MainActivityPermissionsDispatcher.onRequestPermissionsResult(PermissionsDispatcherActivity.this,requestCode,grantResults);
+        PermissionsDispatcherActivityPermissionsDispatcher.
+                onRequestPermissionsResult(PermissionsDispatcherActivity.this,requestCode,grantResults);
     }
 }
